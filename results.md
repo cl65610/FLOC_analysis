@@ -1,0 +1,21 @@
+### For Love of Children - NTP Results
+
+There are some limitations performing analysis on what is a relatively small number of data points. It is difficult to both identify and analyze the impact of outliers. That being said, there are insights that can be derived and may be useful in planning changes or future areas of emphasis.
+
+After some initial analysis, one thing became clear: the number of tutoring hours a student received is one of the worst predictors of what their improvement will be. Looking at this aspect of the Language! curriculum numbers provides a nice example of that. Below, the number of hours a student received are plotted against their improvement in the Word Attack section.
+
+![word attack vs. hours received](https://raw.githubusercontent.com/cl65610/FLOC_analysis/master/Visualization/wa_vs_hrs.png "Word Attack Vs. Hours Received")
+
+While there may appear to be a slight positive relationship, the Pearsonr coefficient (a measure of the correlation between two features) indicates that there is virtually no relationship between these two things in the given data. Put another way, knowing how many hours of instruction a student received explains very little about how much growth they are likely to have. This aspect of the data holds true across all three curricula. Visualizations of this can be found [here](https://github.com/cl65610/FLOC_analysis/tree/master/Visualization).
+
+
+After exploring some other trends in the data, a trend in the data began to emerge. A student's pre-testing grade-level gap is a better predictor of the amount of improvement they could be expected to make than anything else.
+
+Take for exmaple the following plot which shows a student's grade-level gap on their pre-test in Word Attack, and plots against that the amount of improvement they made in Passage Comprehension.
+
+![Word attack-pre vs. passage comp improvement](https://raw.githubusercontent.com/cl65610/FLOC_analysis/master/Visualization/wa_pre%20vs.%20pc%20improve.png "Word Attack pre-scores vs. Passage Comprehension Improvement")
+
+There is a much more obvious positive trend in this data, and while this trend may seem self-explanatory, there may be a more important trend beginning to emerge. Students who made the most improvement in passage comprehension were between one and two years below grade-level in Word Attack ([Here](https://raw.githubusercontent.com/cl65610/FLOC_analysis/master/Visualization/pc_pre_vs.pc_improve.png) a student's pre-score in passage comprehension is plotted against the amount of improvement they made). Similar relationships pop up in other tested areas. For example, there's a similar trend when you look at the relationship between a student's Calculation pre-score, and the amount of improvement they made in Fluency:
+![Calc Pre vs. Fluency Improve](https://raw.githubusercontent.com/cl65610/FLOC_analysis/master/Visualization/calc_pre_vs.fluency_improve.png "Calc Pre-Score vs Fluency Improvement")
+
+Again, the students who made the most consistent growth began the year between one and two years below grade level. 
