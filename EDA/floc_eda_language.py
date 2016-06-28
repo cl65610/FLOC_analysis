@@ -3,8 +3,8 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 %matplotlib inline
 
-language_df = pd.read_csv('language.csv')
-demo_df = pd.read_csv('demo_info.csv')
+language_df = pd.read_csv('https://raw.githubusercontent.com/cl65610/FLOC_analysis/master/Data/language.csv')
+demo_df = pd.read_csv('https://raw.githubusercontent.com/cl65610/FLOC_analysis/master/Data/demo_info.csv')
 language_df.columns
 language_cols = ['ethnicity', 'name', 'pre_test_date', 'start_grade',
                 'post_test_date', 'end_grade', 'wa_pre_score', 'wa_pre_diff',
@@ -40,3 +40,7 @@ lan_merged.id_improve.mean()
 lan_merged.hrs_received.mean()
 
 sns.jointplot(lan_merged.wa_improve, lan_merged.pc_improve)
+
+plot = sns.swarmplot(data = lan_merged, x='ethnicity_y', y='wa_improve', hue='first_gen')
+plt.xticks(rotation=30)
+plt.show()

@@ -16,6 +16,8 @@ Take for exmaple the following plot which shows a student's grade-level gap on t
 ![Word attack-pre vs. passage comp improvement](https://raw.githubusercontent.com/cl65610/FLOC_analysis/master/Visualization/wa_pre%20vs.%20pc%20improve.png "Word Attack pre-scores vs. Passage Comprehension Improvement")
 
 There is a much more obvious positive trend in this data, and while this trend may seem self-explanatory, there may be a more important trend beginning to emerge. Students who made the most improvement in passage comprehension were between one and two years below grade-level in Word Attack ([Here](https://raw.githubusercontent.com/cl65610/FLOC_analysis/master/Visualization/pc_pre_vs.pc_improve.png) a student's pre-score in passage comprehension is plotted against the amount of improvement they made). Similar relationships pop up in other tested areas. For example, there's a similar trend when you look at the relationship between a student's Calculation pre-score, and the amount of improvement they made in Fluency:
+
+
 ![Calc Pre vs. Fluency Improve](https://raw.githubusercontent.com/cl65610/FLOC_analysis/master/Visualization/calc_pre_vs.fluency_improve.png "Calc Pre-Score vs Fluency Improvement")
 
-Again, the students who made the most consistent growth began the year between one and two years below grade level. 
+Again, the students who made the most consistent growth began the year between one and two years below grade level.
