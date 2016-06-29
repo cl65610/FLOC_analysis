@@ -44,5 +44,10 @@ plt.savefig('math_pairplot.png')
 
 
 sns.jointplot(data = math_merged, x = 'hrs_received', y= 'avg_improve')
+sns.jointplot(data = math_merged[math_merged.hrs_received <=20], x = 'hrs_received', y= 'avg_improve')
+sns.jointplot(data = math_merged[math_merged.hrs_received >=20.1], x = 'hrs_received', y= 'avg_improve')
+
+math_merged[math_merged.hrs_received >=20.1].avg_improve.mean()
+math_merged[math_merged.hrs_received <=20.1].avg_improve.mean()
 
 print plt.style.available

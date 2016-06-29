@@ -27,3 +27,19 @@ ethnicities = {'Hispanic/Latino':'Hispanic', 'African American/Black':'African A
                 'Other':'Other', 'Asian/Pacific Islander': 'Asian'}
 wilson_merged.ethnicity = wilson_merged.ethnicity.map(ethnicities)
 wilson_merged.ethnicity.value_counts()
+
+
+sns.pairplot(data = wilson_merged, x_vars = ['wa_pre_diff', 'id_pre_diff', 'pc_pre_diff',
+                                                'hrs_received'],
+                                    y_vars = ['wa_improve', 'wa_gc', 'id_improve', 'id_gc',
+                                            'pc_improve', 'pc_gc'], kind='reg')
+plt.savefig('wilson_pairplot.png')
+
+sns.jointplot(data = wilson_merged, x='hrs_received', y='id_improve')
+
+from sklearn.preprocessing import LabelEncoder
+encode columns = ['first_gen', 'ethnicity', 'free_and_reduced', 'highest_edu']
+wilson_merged.columns
+sns.barplot(x='income', y='pc_gc', data = wilson_merged)
+
+wilson_merged.income.value_counts()
