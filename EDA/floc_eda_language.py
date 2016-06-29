@@ -44,3 +44,19 @@ sns.jointplot(lan_merged.wa_improve, lan_merged.pc_improve)
 plot = sns.swarmplot(data = lan_merged, x='ethnicity_y', y='wa_improve', hue='first_gen')
 plt.xticks(rotation=30)
 plt.show()
+
+# Map more simple ethnicity values onto the appropriate column
+ethnicities = {'Hispanic/Latino':'Hispanic', 'African American/Black':'African American',
+                'Black/African American (non Hispanic)':'African American', 'Multi-Racial':'Multi-Racial',
+                'Other':'Other'}
+lan_merged.ethnicity_y = lan_merged.ethnicity_y.map(ethnicities)
+lan_merged.ethnicity_y.value_counts()
+
+sns.barplot(x='ethnicity_y', y='wa_improve', data = lan_merged)
+
+g = sns.PairGrid(lan_merged, x_vars = 'ethnicity_y', y_vars = ['wa_improve', 'id_improve', 'pc_improve'], size = 6)
+g.map(sns.barplot, palette = 'Set2')
+plt.xticks(rotation=25)
+plt.xlabel('Ethnicity')
+plt.title('Average Improvement by Ethnicity')
+plt.savefig('ethnicity_and_lang.png')
